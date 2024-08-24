@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+//         setTimeout(myfunction,3000);
+// function myfunction(){
+//     document.getElementById("demo").innerHTML="Asynchronus js"
+// }
+
+setInterval(myfunction,3000);
+
+function myfunction(){
+let d= new Date()
+  document.getElementById("demo").innerHTML=d.getHours()+" "+d.getMinutes()+" "+d.getSeconds(   )
+}
+  
+
+// function myfunction(){
+//     document.getElementById("demo").innerHTML="Asynchronus js"
+// }
+
+let promise=new Promise(function(resolve , reject){
+    let x="Javascript"
+    let y="Javascript"
+
+    if(x===y){
+        resolve()
+    }
+    else{
+        reject()
+    }
+})
+promise 
+.then(function(){
+    document.write("Successful")
+})
+.catch(function(){
+document.write("Some error has occured")
+})
+    </script>
+</body>
+</html>
